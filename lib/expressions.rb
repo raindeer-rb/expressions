@@ -1,16 +1,11 @@
 # frozen_string_literal: true
 
-require_relative 'api'
+require_relative 'expression'
 
 module Expressions
-  def self.included(klass)
-    klass.include API
-    klass.include LowType if Expressions.config.type_expression
-  end
-
   class << self
     def config
-      config = Struct.new(:type_expression)
+      config = Struct.new(:something)
       @config ||= config.new(true)
     end
 
