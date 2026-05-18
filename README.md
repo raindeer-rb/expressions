@@ -37,10 +37,24 @@ def method(my_var: Dependency); end
 The table expression inverts the usual database query logic. Instead of building a query of what we want from the database, we build the table we want and let the expression build the query.
 
 ```ruby
-table(:username > :title | :body)
+class PostsData < LowData
+  def all
+    Table[:username, :title, :body]
+  end
+end
 ```
 
-The above expression builds a ORM query to right join the user table into the articles table and results in a list of articles with the user's username in each row
+This expression joins the `posts` table with the `users` table without any joins from the user's perspective.
+
+```ruby
+class PostsData < LowData
+  def all
+    Users[:username] + Posts[:title, :body]
+  end
+end
+```
+
+The above expression generates SQL to join the user table with the posts table and results in a list of posts with the user's username included in each row.
 
 ℹ️ **Requires:** [LowData](https://github.com/low-rb/low_data)
 
