@@ -30,7 +30,7 @@ def method(my_var: Dependency); end
 
 `my_var` is now automatically assigned to via dependency injection.
 
-ℹ️ **Requires:** [LowType](https://github.com/low-rb/low_type) and [LowDependency](https://github.com/low-rb/low_dependency)
+ℹ️ **Requires:** [LowType](https://github.com/low-rb/low_type) and [Providers](https://github.com/raindeer-rb/providers)
 
 ## Data Expression [UNRELEASED]
 
