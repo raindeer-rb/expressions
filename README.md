@@ -1,6 +1,6 @@
 <a href="https://rubygems.org/gems/expressions" title="Install gem"><img src="https://badge.fury.io/rb/expressions.svg" alt="Gem version" height="18"></a>
 
-<p align="center"><img src="assets/logo/expressions.svg" alt="Expressions logo" height="200"/></p>
+<p align="center"><img src="assets/logo/Expressions.svg" alt="Expressions logo" height="200"/></p>
 
 # Expressions
 
